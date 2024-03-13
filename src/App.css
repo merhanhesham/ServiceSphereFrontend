@@ -1,0 +1,279 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+/*client navbar*/
+.navbar {
+  display: flex;
+  align-items: center;
+  background-color: #fff; /* Background color of the navbar */
+  padding: 0.5rem 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Assuming there's a subtle shadow */
+  
+}
+
+.navbar-logo {
+  /* Logo specific styles */
+  margin-right: 1rem;
+}
+
+.navbar-menu {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.dropdown {
+  position: relative;
+  margin-right: 1rem;
+}
+
+.dropbtn {
+  background-color: #fff;
+  color: black;
+  padding: 0.5rem;
+  border: none;
+  cursor: pointer;
+}
+
+/* Assuming you want to style the dropdown content similar to the button */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Show the dropdown content on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/*.search-container {
+  display: flex;
+  flex-grow: 1;
+  justify-content: flex-end;
+}
+
+.search-container input {
+  padding: 0.5rem;
+  margin-right: 1rem; 
+}*/
+
+.search-container {
+  display: flex;
+  margin-left: auto;
+  justify-content: flex-end; /* This will position the search container to the end of the flex container it's in */
+  border: 2px solid #ddd; /* Add border to the container */
+  border-radius: 22px; /* Rounded corners for the container */
+  overflow: hidden; /* Ensures that the children don't overflow the rounded corners */
+}
+
+.search-container input {
+  
+  flex-grow: 1;
+  border: none; /* Remove border from the input */
+  outline: none; /* Remove the outline to prevent a box shadow when active */
+  padding: 0.5rem; /* Padding inside the input */
+  margin-right: 1rem; /* Negative margin to counteract the border of the dropdown */
+}
+
+.search-dropdown {
+  display: flex; /* To align the caret icon with the text */
+  align-items: center; /* Center the content vertically */
+  background: #fff; /* Background of the dropdown */
+  border-left: 2px solid #ddd; /* Separator between the input and the dropdown */
+  padding: 0.5rem 1rem; /* Padding inside the dropdown */
+}
+
+.dropbtn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex; /* To align the caret icon with the text */
+  align-items: center; /* Center the text and the icon vertically */
+  padding: 0; /* Remove padding to let the .search-dropdown handle it */
+  margin-left: 20px; /* Remove any default margin */
+}
+
+/* Add additional styles for .dropdown-content and other elements as needed */
+
+
+.icon {
+  font-size: 1.5rem;
+  margin-left: 0.5rem;
+}
+
+/* Add any additional styles, such as responsive design */
+@media screen and (max-width: 768px) {
+  .navbar-menu {
+    flex-direction: column;
+  }
+}
+/*client navbar end*/
+/*Client main page*/
+
+.mainpage {
+  width: 100%; /* Make sure the main page takes up the full width of the viewport */
+ 
+}
+
+
+/*.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 800px; 
+  margin: 0 auto; 
+}
+.container2{
+  display: flex;
+  align-items: center;
+}*/
+
+.AboveBlock{
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box; 
+  align-items: center;
+  margin: auto;
+}
+/*.container {
+  margin-top: 150px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%; 
+  box-sizing: border-box; 
+  padding: 0;
+  align-items: center;
+}*/
+
+
+.left {
+  width: 50%; /* Take up half of the container's width */
+  padding: 20px; /* Add padding for spacing */
+  box-sizing: border-box; /* Include padding and border in the width calculation */
+}
+
+.right {
+  width: 50%; /* Take up half of the container's width */
+  box-sizing: border-box; /* Include padding and border in the width calculation */
+}
+
+/* Adjust styling for elements within left and right parts as needed */
+.left h2 {
+  color: #333; /* Example color for the title */
+}
+
+.left p {
+  color: #666; /* Example color for the description */
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.left button {
+  background-color: #007bff; /* Example button color */
+  color: #fff; /* Example text color */
+  padding: 10px 20px; /* Example padding */
+  border: none;
+  cursor: pointer;
+  border-radius: 20px;
+}
+
+.right img {
+  max-width: 100%; /* Ensure the image doesn't exceed the container's width */
+}
+
+.post {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.post-image {
+  width: 100px;
+  height: 100px;
+  margin-right: 10px;
+}
+
+.post-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.post-title {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.post-time {
+  margin-bottom: 5px;
+}
+
+.post-price {
+  margin-bottom: 5px;
+}
+
+.post-paragraph {
+  margin-bottom: 5px;
+}
+
+.post-skills {
+  margin-bottom: 5px;
+}
+
+.post-location {
+  margin-bottom: 5px;
+}
+
+.post-divider {
+  height: 1px;
+  background-color: #ccc;
+  margin-bottom: 10px;
+}
+
+.navbar-brand{
+  width: fit-content;
+  height: fit-content;
+}
