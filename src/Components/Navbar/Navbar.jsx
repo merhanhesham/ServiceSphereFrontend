@@ -14,11 +14,11 @@ export default function Navbar({deleteUser,user}) {
 
   return <>
   
-  <nav className="navbar navbar-expand-lg bg-body-tertiary position-fixed top-0 end-0 start-0" style={{zIndex:'99999'}}>
+  <nav className="navbar navbar-expand-lg bg-transparent position-fixed top-0 end-0 start-0" style={{zIndex:'99999'}}>
         <div className="container-fluid">
           <Link className="navbar-brand" to="#">
             {/* !!  Enter The Logo  */}
-            <img  alt="logo" />
+            <img src={require('../../Images/Picture2.png')}  alt="logo" style={{ maxHeight: '50px' }} />
           </Link>
           <button
             className="navbar-toggler"
@@ -36,6 +36,11 @@ export default function Navbar({deleteUser,user}) {
               <li className="nav-item active">
                 <Link className="nav-link " aria-current="page" to="/home">
                   Home
+                </Link>
+              </li>
+              <li className="nav-item active">
+                <Link className="nav-link " aria-current="page" to="/ProjectPostings">
+                  Project Postings
                 </Link>
               </li>
             </ul>
