@@ -14,6 +14,7 @@ import ClientMainPage from './Components/Client/ClientMainPage';
 import FreelancerMainPage from './Components/Freelancer/ServicePostings';
 import ServicePostings from './Components/Freelancer/ServicePostings';
 import ProjectPostings from './Components/Freelancer/ProjectPostings/ProjectPostings';
+import Profile from './Components/Freelancer/Profile/Profile';
 
 function App() {
   const [crrUser, setCrrUser] = useState(null);
@@ -84,6 +85,7 @@ function App() {
           { path: 'ClientMainPage', element: <ClientMainPage /> },
           { path: 'ServicePostings', element: <ServicePostings /> },
           { path: 'ProjectPostings', element: <ProjectPostings /> },
+          { path: 'profile', element: <Profile /> },
           { path: '*', element: <>not found</> },
 
         ]

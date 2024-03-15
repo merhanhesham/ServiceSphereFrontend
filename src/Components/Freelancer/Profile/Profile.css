@@ -1,0 +1,58 @@
+body{
+    background-color: #f7f7f7;
+    
+}
+
+h2{
+    color: brown;
+}
+
+.social-media{
+    
+    width: 45px;
+    height: 45px;
+    border: #9870ff solid 3px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+.social-media span:hover{
+    color: #9870ff;
+}
+.social-media span{
+    transition: 0.7s;
+}
+.box-div{
+    width: 70%;
+    min-height: 85%;
+
+}
+.progress, .progress-stacked {
+    
+    --bs-progress-border-radius: 0;
+    --bs-progress-bar-bg:#9870ff ;
+    background-color: #CDE1F8;
+    width: 100%;
+}
+.below-content .text span{
+    float: right;
+}
+
+.LineBelowDiv{
+    
+    border-bottom: 1px solid #bcc5d3; 
+}
+.profilebtn {
+    background-color: #9870ff !important; /* Makes the button background color #9870ff */
+    color: #fff !important; /* Makes the text color white */
+    font-weight: bold !important; /* Makes the text bold */
+  }
+
+.pill-button {
+    background-color: #9870ff; /* Button background color */
+    border: none; /* No border */
+    border-radius: 50rem; /* Pill shaped border-radius */
+    padding: 0.5rem 1.5rem; /* Top and bottom padding 0.5rem, left and right padding 1.5rem */
+    color: white; /* Text color */
+    font-size: 1rem; /* Adjust font size as needed */
+    text-transform: uppercase; /* Uppercase text */
+  }

@@ -10,28 +10,29 @@ import { useState } from 'react'
 export default function Home() {
   const [PostFlag, setPostFlag] = useState(true)
 
-  function handleSerivePosts(){
+  function handleSerivePosts() {
     console.log("service");
-     setPostFlag(true)
+    setPostFlag(true)
   }
-function handleProjectPosts(){
-  console.log("Project");
-  setPostFlag(false);
-}
+  function handleProjectPosts() {
+    console.log("Project");
+    setPostFlag(false);
+  }
 
   return <>
 
-     <div className='container p-5'>
+    <div className='container p-5'>
       <div className="container mt-5">
         <div className="buttons">
           <button className='btn btn-dark mx-5' onClick={handleSerivePosts}>Service Posts</button>
           <button className='btn btn-dark' onClick={handleProjectPosts}>Project Posts</button>
         </div>
         <div className="posts my-5">
-              {PostFlag?<ServicePostings/>:<ProjectPostings/>}
+          {PostFlag ? <ServicePostings /> : <ProjectPostings />}
         </div>
       </div>
 
-     </div>
+    </div>
+
   </>
 }
