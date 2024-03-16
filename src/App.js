@@ -10,11 +10,12 @@ import { useEffect, useState } from 'react';
 import { jwtDecode } from 'jwt-decode';
 import AddService from './Services/Service/AddService';
 import AllServices from './Services/Service/Allservices/AllServices';
-import ClientMainPage from './Components/Client/ClientMainPage';
+import ClientMainPage from './Components/Client/ClientMainPage/ClientMainPage';
 import FreelancerMainPage from './Components/Freelancer/ServicePostings';
 import ServicePostings from './Components/Freelancer/ServicePostings';
 import ProjectPostings from './Components/Freelancer/ProjectPostings/ProjectPostings';
 import Profile from './Components/Freelancer/Profile/Profile';
+import EditProfile from './Components/Freelancer/Profile/EditProfile';
 
 function App() {
   const [crrUser, setCrrUser] = useState(null);
@@ -86,6 +87,7 @@ function App() {
           { path: 'ServicePostings', element: <ServicePostings /> },
           { path: 'ProjectPostings', element: <ProjectPostings /> },
           { path: 'profile', element: <Profile /> },
+          { path: '/edit-profile', element: <EditProfile /> },
           { path: '*', element: <>not found</> },
 
         ]
