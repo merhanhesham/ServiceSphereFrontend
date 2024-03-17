@@ -17,7 +17,7 @@ export default function Navbar({deleteUser,user}) {
   <nav className="navbar navbar-expand-lg bg-transparent top-0 end-0 start-0" style={{zIndex:'99999'}}>
         <div className="container-fluid">
           <Link className="navbar-brand" to="#">
-            {/* !!  Enter The Logo  */}
+            
             <img src={require('../../Images/Picture2.png')}  alt="logo" style={{ maxHeight: '50px' }} />
           </Link>
           <button
@@ -70,6 +70,7 @@ export default function Navbar({deleteUser,user}) {
             </ul>
           </div>
         </div>
-      </nav>
+</nav>
+
   </>
 }

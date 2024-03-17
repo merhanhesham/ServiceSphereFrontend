@@ -1,6 +1,6 @@
 import React from 'react'
 import ClientNavbar from '../Client/ClientNavbar'
-import ClientMainPage from '../Client/ClientMainPage'
+import ClientMainPage from '../Client/ClientMainPage/ClientMainPage'
 import FreelancerMainPage from '../Freelancer/ServicePostings'
 import Profile from '../Freelancer/Profile/Profile'
 import $ from 'jquery'
@@ -21,7 +21,7 @@ export default function Home() {
 
   return <>
 
-    <div className='container p-5'>
+    {/*<div className='container p-5'>
       <div className="container mt-5">
         <div className="buttons">
           <button className='btn btn-dark mx-5' onClick={handleSerivePosts}>Service Posts</button>
@@ -32,7 +32,9 @@ export default function Home() {
         </div>
       </div>
 
-    </div>
+</div>*/}
+<ClientMainPage/>
+
 
   </>
 }
