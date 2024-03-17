@@ -15,14 +15,14 @@ const Profile = () => {
             const headers = {
                 Authorization: `Bearer ${token}`
             };
-            const profile = await axios.get(
+            const response = await axios.get(
                 `https://localhost:7157/api/Freelancer/GetProfile`,
                 // Request body is empty, assuming serviceDto is being sent from the client
                 { headers: headers } // Pass headers as a separate object
             );
             
-            console.log(profile.data);
-            setProfile(profile.data)
+            console.log(response.data);
+            setProfile(response.data)
            
             
         }

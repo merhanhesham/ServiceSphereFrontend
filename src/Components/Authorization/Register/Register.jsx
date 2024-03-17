@@ -2,6 +2,7 @@ import axios from 'axios';
 import { useFormik } from 'formik';
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom';
+import { FaUserTie, FaUser } from 'react-icons/fa'; // Import the icons
 import $ from 'jquery';
 
 export default function Register() {
@@ -78,37 +79,73 @@ let formik=useFormik(
     }
 )
 return (
-    <div>
-        <div className="container p-5">
-       <div className='errMsg alert alert-danger' style={{'display':'none'}}>authentication failed .. </div>
-       <div className='errMsgEmailExist alert alert-danger' style={{'display':'none'}}>authentication failed ..Email already Exist ! </div>
-       <div className='successMsg alert alert-success' style={{'display':'none'}}>Register has been done successfully!</div>
-        <h2 className='py-2'>Register Now:</h2>
-        <form className='row g-4 container' onSubmit={formik.handleSubmit}>
-            <input onChange={formik.handleChange} onBlur={formik.handleBlur} value={formik.values.DisplayName} type="text" name="DisplayName" placeholder="name" className='form-control'  />
-            {formik.errors.name&&formik.touched.DisplayName?  <div className='alert alert-danger'>{formik.errors.DisplayName}</div>:''}
-            <input onChange={formik.handleChange} onBlur={formik.handleBlur} value={formik.values.email} type="email" name="email" placeholder="email" className='form-control' />
-            {formik.errors.email&&formik.touched.email?  <div className='alert alert-danger'>{formik.errors.email}</div>:''}
-            <input onChange={formik.handleChange} onBlur={formik.handleBlur} value={formik.values.password} type="password" name="password" placeholder="password" className='form-control' />
-            {formik.errors.password&&formik.touched.password?  <div className='alert alert-danger'>{formik.errors.password}</div>:''}
-            <input onChange={formik.handleChange} onBlur={formik.handleBlur} value={formik.values.rePassword} type="password" name="rePassword" placeholder="confirm password" className='form-control' />
-            {formik.errors.rePassword&&formik.touched.rePassword?  <div className='alert alert-danger'>{formik.errors.rePassword}</div>:''}
-            <input onChange={formik.handleChange} onBlur={formik.handleBlur} value={formik.values.PhoneNumber} type="text" name="PhoneNumber" placeholder="Phone Number" className='form-control' />
-            {formik.errors.PhoneNumber&&formik.touched.PhoneNumber?  <div className='alert alert-danger'>{formik.errors.PhoneNumber}</div>:''}
-            <div>
-            <label className="btn btn-success mx-4">
-            <input onChange={handleRoleChange} type="radio" name="Role" id="option1" className=''   value='Client'/> Client
-             </label>
-             <label className="btn btn-success">
-            <input onChange={handleRoleChange} type="radio" name="Role" id="option2"  value='Freelancer'/> Freelancer
-             </label>
-            {formik.errors.Role&&formik.touched.Role?  <div className='alert alert-danger'>{formik.errors.Role}</div>:''}
-
+    <div className="container mt-5">
+    <div className="row justify-content-center">
+      <div className="col-lg-8">
+        <div className="p-5 bg-light shadow rounded">
+          <div className="errMsg alert alert-danger" style={{ display: "none" }}>Authentication failed ..</div>
+          <div className="errMsgEmailExist alert alert-danger" style={{ display: "none" }}>Authentication failed .. Email already exists!</div>
+          <div className="successMsg alert alert-success" style={{ display: "none" }}>Register done successfully!</div>
+          <h2 className="py-2 text-center">Join Us Now!</h2>
+          <form className="row g-3 needs-validation" onSubmit={formik.handleSubmit} noValidate>
+            <div className="col-md-12">
+              <input onChange={formik.handleChange} onBlur={formik.handleBlur} value={formik.values.DisplayName} type="text" name="DisplayName" placeholder="Name" className="form-control" required />
+              {formik.errors.DisplayName && formik.touched.DisplayName ? <div className="alert alert-danger">{formik.errors.DisplayName}</div> : ''}
             </div>
-            <button className='btn bg-success text-white col-lg-1 ms-auto' type='submit'>Register</button>
-        </form>
-        </div>
+            <div className="col-md-12">
+              <input onChange={formik.handleChange} onBlur={formik.handleBlur} value={formik.values.email} type="email" name="email" placeholder="Email" className="form-control" required />
+              {formik.errors.email && formik.touched.email ? <div className="alert alert-danger">{formik.errors.email}</div> : ''}
+            </div>
+            <div className="col-md-12">
+              <input onChange={formik.handleChange} onBlur={formik.handleBlur} value={formik.values.password} type="password" name="password" placeholder="Password" className="form-control" required />
+              {formik.errors.password && formik.touched.password ? <div className="alert alert-danger">{formik.errors.password}</div> : ''}
+            </div>
+            <div className="col-md-12">
+              <input onChange={formik.handleChange} onBlur={formik.handleBlur} value={formik.values.rePassword} type="password" name="rePassword" placeholder="Confirm Password" className="form-control" required />
+              {formik.errors.rePassword && formik.touched.rePassword ? <div className="alert alert-danger">{formik.errors.rePassword}</div> : ''}
+            </div>
+            <div className="col-md-12">
+              <input onChange={formik.handleChange} onBlur={formik.handleBlur} value={formik.values.PhoneNumber} type="text" name="PhoneNumber" placeholder="Phone Number" className="form-control" required />
+              {formik.errors.PhoneNumber && formik.touched.PhoneNumber ? <div className="alert alert-danger">{formik.errors.PhoneNumber}</div> : ''}
+            </div>
+            <div className="d-flex align-items-center">
+      <div className="form-check form-check-inline">
+        <input
+          className="form-check-input"
+          type="radio"
+          name="Role"
+          id="Client"
+          value="Client"
+          onChange={handleRoleChange}
+        />
+        <label className="form-check-label d-flex align-items-center" htmlFor="Client">
+          <FaUser className="me-2" />Client
+        </label>
+      </div>
+      <div className="form-check form-check-inline">
+        <input
+          className="form-check-input"
+          type="radio"
+          name="Role"
+          id="Freelancer"
+          value="Freelancer"
+          onChange={handleRoleChange}
+        />
+        <label className="form-check-label d-flex align-items-center" htmlFor="Freelancer">
+          <FaUserTie className="me-2" />Freelancer
+        </label>
+      </div>
     </div>
+            {formik.errors.Role && formik.touched.Role ? <div className="alert alert-danger">{formik.errors.Role}</div> : ''}
+            <div className="col-12 text-end">
+              <button className="btn main-btn text-white" type="submit">Register</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  
 );
 
 }
