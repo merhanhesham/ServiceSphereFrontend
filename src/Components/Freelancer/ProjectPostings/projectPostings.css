@@ -28,3 +28,7 @@ background-color: #715df270;
     border-left: 55px solid transparent;
     border-right: 55px solid transparent
   }
+  #projectposting .card{
+    --bs-card-border-color:  #9870ff !important;
+    --bs-card-bg: #9870ff16 !important;
+  }

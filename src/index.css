@@ -32,3 +32,8 @@ code {
   background-color: #9870ff !important;
   border-color: #9870ff !important;
 }
+.dropdown-menu{
+  --bs-dropdown-padding-x: 20px !important;
+  --bs-dropdown-bg:  #eae8ee !important;
+  
+}

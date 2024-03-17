@@ -15,6 +15,7 @@ import FreelancerMainPage from './Components/Freelancer/ServicePostings';
 import ServicePostings from './Components/Freelancer/ServicePostings';
 import ProjectPostings from './Components/Freelancer/ProjectPostings/ProjectPostings';
 import Profile from './Components/Freelancer/Profile/Profile';
+import Posts from './Components/Freelancer/Posts/Posts';
 
 function App() {
   const [crrUser, setCrrUser] = useState(null);
@@ -86,6 +87,7 @@ function App() {
           { path: 'ServicePostings', element: <ServicePostings /> },
           { path: 'ProjectPostings', element: <ProjectPostings /> },
           { path: 'profile', element: <Profile /> },
+          { path: 'posts', element: <Posts /> },
           { path: '*', element: <>not found</> },
 
         ]
