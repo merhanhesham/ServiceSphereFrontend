@@ -2,7 +2,9 @@ import axios from "axios";
 import React, { useState } from "react";
 import { useEffect } from "react";
 import "./ProjectPostings/projectPostings.css";
-export default function ServicePostings() {
+import Proposal from "./Agreements/Proposal/Proposal";
+import { Link } from "react-router-dom";
+export default function ServicePostings({PostFlag}) {
   const [posts, setPosts] = useState([]);
   const [categoryId, setcategoryId] = useState(null)
 
@@ -23,6 +25,8 @@ export default function ServicePostings() {
     console.error("Error fetching posts:", error);
   }
  }
+
+ 
 
   useEffect(() => {
     try {
@@ -109,7 +113,7 @@ export default function ServicePostings() {
                     <p>{HandleCategory(post.categoryId)}</p>
                   </div>
                   <div className="text-center mt-3">
-                    <button className="btn main-btn">Apply</button>
+                        <Link to={`/Proposal/${PostFlag}/${post.id}`}><button className="btn main-btn">Apply</button></Link>
                   </div>
                 </div>
               </div>
