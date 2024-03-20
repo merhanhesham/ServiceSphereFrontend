@@ -21,11 +21,11 @@ export default function Posts() {
     <div className='container p-5'>
       <div className="container mt-5">
         <div className="buttons">
-          <button className='btn btn-dark mx-5' onClick={handleSerivePosts} >Service Posts</button>
+          <button className='btn btn-dark mx-5' onClick={handleSerivePosts}>Service Posts</button>
           <button className='btn btn-dark' onClick={handleProjectPosts}>Project Posts</button>
         </div>
         <div className="posts my-5">
-          {PostFlag ? <ServicePostings PostFlag={PostFlag}/> : <ProjectPostings PostFlag={PostFlag} />}
+          {PostFlag ? <ServicePostings /> : <ProjectPostings />}
         </div>
       </div>
 

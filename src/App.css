@@ -28,6 +28,7 @@
   color: #61dafb;
 }
 
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -36,23 +37,26 @@
     transform: rotate(360deg);
   }
 }
-
 body{
-  background-color: #f5f5f5;
-  
+  background-color: #f4f4f4 !important;
 }
+
+/*.ProfileStep4{
+  background-color: red !important;
+}*/
+
 /*client navbar*/
 .navbar {
   display: flex;
   align-items: center;
-  background-color: #fff; /* Background color of the navbar */
+  background-color: #fff; 
   padding: 0.5rem 1rem;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Assuming there's a subtle shadow */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   
 }
 
 .navbar-logo {
-  /* Logo specific styles */
+
   margin-right: 1rem;
 }
 
@@ -77,7 +81,7 @@ body{
   cursor: pointer;
 }
 
-/* Assuming you want to style the dropdown content similar to the button */
+
 .dropdown-content {
   display: none;
   position: absolute;
@@ -87,9 +91,12 @@ body{
   z-index: 1;
 }
 
-/* Show the dropdown content on hover */
 .dropdown:hover .dropdown-content {
   display: block;
+}
+
+body{
+  background-color: white !important;
 }
 
 /*.search-container {
@@ -101,51 +108,50 @@ body{
 .search-container input {
   padding: 0.5rem;
   margin-right: 1rem; 
-}*/
+}
 
 .search-container {
   display: flex;
   margin-left: auto;
-  justify-content: flex-end; /* This will position the search container to the end of the flex container it's in */
-  border: 2px solid #ddd; /* Add border to the container */
-  border-radius: 22px; /* Rounded corners for the container */
-  overflow: hidden; /* Ensures that the children don't overflow the rounded corners */
+  justify-content: flex-end; 
+  border: 2px solid #ddd; 
+  border-radius: 22px; 
+  overflow: hidden; 
 }
 
 .search-container input {
   
   flex-grow: 1;
-  border: none; /* Remove border from the input */
-  outline: none; /* Remove the outline to prevent a box shadow when active */
-  padding: 0.5rem; /* Padding inside the input */
-  margin-right: 1rem; /* Negative margin to counteract the border of the dropdown */
+  border: none; 
+  outline: none; 
+  padding: 0.5rem; 
+  margin-right: 1rem;
 }
 
 .search-dropdown {
-  display: flex; /* To align the caret icon with the text */
-  align-items: center; /* Center the content vertically */
-  background: #fff; /* Background of the dropdown */
-  border-left: 2px solid #ddd; /* Separator between the input and the dropdown */
-  padding: 0.5rem 1rem; /* Padding inside the dropdown */
+  display: flex; 
+  align-items: center; 
+  background: #fff;
+  border-left: 2px solid #ddd; 
+  padding: 0.5rem 1rem; 
 }
 
 .dropbtn {
   background: none;
   border: none;
   cursor: pointer;
-  display: flex; /* To align the caret icon with the text */
-  align-items: center; /* Center the text and the icon vertically */
-  padding: 0; /* Remove padding to let the .search-dropdown handle it */
-  margin-left: 20px; /* Remove any default margin */
-}
+  display: flex; 
+  align-items: center; 
+  padding: 0; 
+  margin-left: 20px; 
 
-/* Add additional styles for .dropdown-content and other elements as needed */
+
 
 
 .icon {
   font-size: 1.5rem;
   margin-left: 0.5rem;
-}
+}*/
 
 /* Add any additional styles, such as responsive design */
 @media screen and (max-width: 768px) {

@@ -88,7 +88,7 @@ const ClientMainPage = () => {
 
     </div>*/}
             <div className="about" id="about">
-                <div className="inAbout container py-5">
+                <div className="inAbout py-5 px-5">
                     <div className="all-title">
                         <div className="title position-relative text-center">
                             <div className="above-text text-cc">
@@ -125,7 +125,7 @@ const ClientMainPage = () => {
 
                         </div>
                         <div className="col-md-5">
-                            <img src={require('../../../Images/Picture1.png')} alt="logo" className='w-100' />
+                            <img src={require('../../../Images/clienthomepage.png')} alt="logo" className='w-100 h-100' />
                         </div>
                     </div>
                 </div>

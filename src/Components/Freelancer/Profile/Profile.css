@@ -1,11 +1,8 @@
 body{
-    background-color: #f5f5f5;
+    background-color: #fff;
     
 }
 
-h2{
-    color: brown;
-}
 
 .social-media{
     
@@ -26,16 +23,7 @@ h2{
     min-height: 85%;
 
 }
-.progress, .progress-stacked {
-    
-    --bs-progress-border-radius: 0;
-    --bs-progress-bar-bg:#9870ff ;
-    background-color: #CDE1F8;
-    width: 100%;
-}
-.below-content .text span{
-    float: right;
-}
+
 
 .LineBelowDiv{
     

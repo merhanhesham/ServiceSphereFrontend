@@ -15,8 +15,14 @@ import FreelancerMainPage from './Components/Freelancer/ServicePostings';
 import ServicePostings from './Components/Freelancer/ServicePostings';
 import ProjectPostings from './Components/Freelancer/ProjectPostings/ProjectPostings';
 import Profile from './Components/Freelancer/Profile/Profile';
+import EditProfile from './Components/Freelancer/Profile/EditProfile';
+import ProfileStep1 from './Components/Freelancer/ProfileProcess/ProfileStep1'
+import ProfileStep2 from './Components/Freelancer/ProfileProcess/ProfileStep2'
+import ProfileStep3 from './Components/Freelancer/ProfileProcess/ProfileStep3'
+import ProfileStep4 from './Components/Freelancer/ProfileProcess/ProfileStep4'
+import ProfileStep5 from './Components/Freelancer/ProfileProcess/ProfileStep5'
 import Posts from './Components/Freelancer/Posts/Posts';
-import Proposal from './Components/Freelancer/Agreements/Proposal/Proposal';
+import ProfileStepsParent from './Components/Freelancer/ProfileProcess/ProfileStepsParent/ProfileStepsParent';
 
 function App() {
   const [crrUser, setCrrUser] = useState(null);
@@ -88,8 +94,14 @@ function App() {
           { path: 'ServicePostings', element: <ServicePostings /> },
           { path: 'ProjectPostings', element: <ProjectPostings /> },
           { path: 'profile', element: <Profile /> },
+          { path: '/edit-profile', element: <EditProfile /> },
+          { path: '/profileStep1', element: <ProfileStep1 /> },
+          { path: '/profileStep2', element: <ProfileStep2 /> },
+          { path: '/profileStep3', element: <ProfileStep3/> },
+          { path: '/profileStep4', element: <ProfileStep4 /> },
+          { path: '/profileStep5', element: <ProfileStep5 /> },
+          { path: '/profileStepsParent', element: <ProfileStepsParent /> },
           { path: 'posts', element: <Posts /> },
-          { path: 'Proposal/:flag/:id', element: <Proposal  /> },
           { path: '*', element: <>not found</> },
 
         ]

@@ -17,7 +17,7 @@ export default function Login({ getUserData, GetCurrentUserId }) {
     );
     if (res.data.email === user.email) {
       localStorage.setItem("user", res.data.token);
-      
+
 
       //getId
       GetCurrentUserId(res.data.id);
@@ -68,76 +68,78 @@ export default function Login({ getUserData, GetCurrentUserId }) {
   });
   return (
     <>
-    <div className="container my-5">
-      <div className="row justify-content-center align-items-center">
-        <div className="col-lg-6 mb-5 mb-lg-0">
-          <div className="item shadow rounded">
-            <img src="" alt="Video 2" className="img-fluid rounded" />
-          </div>
-        </div>
-        <div className="col-lg-6">
-          <div className="item bg-light p-5 shadow rounded">
-            <div className="errMsg alert alert-danger" style={{ display: "none" }}>
-              Email or password is incorrect ..
+      <div className="d-flex align-items-center justify-content-center min-vh-100">
+        <div className="container my-5 ">
+          <div className="row justify-content-center align-items-center">
+            <div className="col-lg-6 mb-5 mb-lg-0 ">
+              <div className="item shadow rounded">
+                <img src="" alt="Video 2" className="img-fluid rounded" />
+              </div>
             </div>
-            <div className="successMsg alert alert-success" style={{ display: "none" }}>
-              Welcome!
-            </div>
-            <h2 className="py-2">Login</h2>
-            <p>Welcome back! Please log in to your account in ServiceSphere.</p>
-            <form className="row g-3 justify-content-center" onSubmit={formik.handleSubmit}>
-              <div className="col-12">
-                <input
-                  onChange={formik.handleChange}
-                  onBlur={formik.handleBlur}
-                  value={formik.values.email}
-                  type="email"
-                  name="email"
-                  placeholder="Email"
-                  className="form-control"
-                />
-                {formik.errors.email && formik.touched.email && (
-                  <div className="alert alert-danger mt-2">
-                    {formik.errors.email}
+            <div className="col-lg-6 ">
+              <div className="item bg-light p-5 manualShadow rounded-4">
+                <div className="errMsg alert alert-danger" style={{ display: "none" }}>
+                  Email or password is incorrect ..
+                </div>
+                <div className="successMsg alert alert-success" style={{ display: "none" }}>
+                  Welcome!
+                </div>
+                <h2 className="py-2">Login</h2>
+                <p>Welcome back! Please log in to your account in ServiceSphere.</p>
+                <form className="row g-3 justify-content-center" onSubmit={formik.handleSubmit}>
+                  <div className="col-12">
+                    <input
+                      onChange={formik.handleChange}
+                      onBlur={formik.handleBlur}
+                      value={formik.values.email}
+                      type="email"
+                      name="email"
+                      placeholder="Email"
+                      className="form-control"
+                    />
+                    {formik.errors.email && formik.touched.email && (
+                      <div className="alert alert-danger mt-2">
+                        {formik.errors.email}
+                      </div>
+                    )}
                   </div>
-                )}
-              </div>
-              <div className="col-12">
-                <input
-                  onChange={formik.handleChange}
-                  onBlur={formik.handleBlur}
-                  value={formik.values.password}
-                  type="password"
-                  name="password"
-                  placeholder="Password"
-                  className="form-control"
-                />
-                {formik.errors.password && formik.touched.password && (
-                  <div className="alert alert-danger mt-2">
-                    {formik.errors.password}
+                  <div className="col-12">
+                    <input
+                      onChange={formik.handleChange}
+                      onBlur={formik.handleBlur}
+                      value={formik.values.password}
+                      type="password"
+                      name="password"
+                      placeholder="Password"
+                      className="form-control"
+                    />
+                    {formik.errors.password && formik.touched.password && (
+                      <div className="alert alert-danger mt-2">
+                        {formik.errors.password}
+                      </div>
+                    )}
                   </div>
-                )}
+                  <div className="col-12">
+                    <button className="btn main-btn text-white w-100" type="submit" >
+                      Login
+                    </button>
+                  </div>
+                </form>
+                <div className="text-center mt-4">
+                  <div className="divider">
+                    <span className="divider-text">or</span>
+                  </div>
+                  <p className="text-secondary">Don't have an account?</p>
+                  <button className="btn main-btn text-white w-50">
+                    Sign up
+                  </button>
+                </div>
               </div>
-              <div className="col-12">
-                <button className="btn main-btn text-white w-100" type="submit">
-                  Login
-                </button>
-              </div>
-            </form>
-            <div className="text-center mt-4">
-              <div className="divider">
-                <span className="divider-text">or</span>
-              </div>
-              <p className="text-secondary">Don't have an account?</p>
-              <button className="btn main-btn text-white w-50">
-                Sign up
-              </button>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </>
-  
+    </>
+
   );
 }

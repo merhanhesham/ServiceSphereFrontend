@@ -4,7 +4,7 @@ import './ProfileSteps.css';
 import { Link } from 'react-router-dom';
 import { FaCircle } from 'react-icons/fa';
 import { AiFillEdit } from 'react-icons/ai';
-const ProfileStep3 = () => {
+const ProfileStep3 = ({ formData, handleChange, nextStep,prevStep }) => {
 
 
 
@@ -21,7 +21,8 @@ const ProfileStep3 = () => {
                                 about yourself <AiFillEdit size={40} className='pb-1' /></h2>
                             <h4 className='ps-4 lead'>Condense your story! Let's create a brief bio that resonates, inviting others to share theirs.</h4>
                             <div className="form-group ps-4 ">
-                                <textarea name="bio" as="textarea" style={{ height: '200px', backgroundColor: '#E0E0E0' }} className="form-control p-3 bio rounded-3" placeholder="Share a bit about yourself. E.g., your professional background, passions, and key achievements." />
+                                <textarea name="Bio" as="textarea" style={{ height: '200px', backgroundColor: '#E0E0E0' }} value={formData.Bio}
+                                    onChange={handleChange}   className="form-control p-3 bio rounded-3" placeholder="Share a bit about yourself. E.g., your professional background, passions, and key achievements." />
                             </div>
                         </div>
 
@@ -31,11 +32,11 @@ const ProfileStep3 = () => {
 
                         <div className='d-flex justify-content-between mt-5'>
                             <div >
-                                <Link to="/profileStep2"><button type="button" className="btn mb-3 font-weight-bold profilebtn rounded-3 px-5"><span>Back</span></button></Link>
+                                <Link ><button type="button" className="btn mb-3 font-weight-bold profilebtn rounded-3 px-5" onClick={prevStep}><span>Back</span></button></Link>
                             </div>
 
                             <div >
-                                <Link to="/profileStep4"><button type="button" className="btn mb-3 font-weight-bold profilebtn rounded-3 px-5"><span>Next</span></button></Link>
+                                <Link ><button type="button" className="btn mb-3 font-weight-bold profilebtn rounded-3 px-5"onClick={nextStep}><span>Next</span></button></Link>
                             </div>
                         </div>
 

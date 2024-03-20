@@ -38,11 +38,11 @@
 }
 
 .btn.profilebtn:hover {
-    background-color: #9636fc; /* Darken button color on hover */
+    background-color: #c9bad9; /* Darken button color on hover */
 }
 
 .box-div{
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5); /* Further increased the alpha value for a darker shadow */
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2); /* Further increased the alpha value for a darker shadow */
 }
 
 .form-control::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */

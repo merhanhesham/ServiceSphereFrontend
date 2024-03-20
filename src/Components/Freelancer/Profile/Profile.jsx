@@ -80,13 +80,13 @@ const Profile = () => {
                                         <div className="row justify-content-center">
                                             <div className="col-sm-12 col-xl-4">
                                                 <div className="imgdiv">
-                                                    <img src={require('../../../Images/unknown.webp')} className="rounded w-100" alt="Profile" />
+                                                    <img src={require('../../../Images/unknown.webp')} style={{ border: '2px solid #a855f7' }} className="rounded w-100" alt="Profile" />
                                                 </div>
                                             </div>
                                             <div className="col-sm-12 col-xl-7 offset-xl-1">
                                                 <div>
                                                     <h4 className="font-weight-bold mb-3">{profile.displayName}</h4>
-                                                    <p><span className="fs-5 lead">Title (software developer)</span></p>
+                                                    <p><span className="fs-5 lead">{profile.title}</span></p>
                                                     <p><span className="fs-5 lead">{profile.experienceLevel}</span></p>
                                                     <p><span className="fs-5 lead">{profile.phoneNumber}</span></p>
                                                     <p><span className="fs-5 lead">Ismailia, Egypt</span></p>
@@ -135,7 +135,7 @@ const Profile = () => {
                             <h4 className="font-weight-bold mt-4 mb-4">Service SubCategories Offered</h4>
                             <div className='buttonsDiv mb-5'>
                                 {profile?.subCategories && profile.subCategories.length > 0 ? (
-                                    renderCategories()
+                                    renderSubCategories()
                                 ) : (
                                     <div className="text-muted">
                                         <p>No SubCategories listed. Click "Edit Profile" to add SubCategories.</p>

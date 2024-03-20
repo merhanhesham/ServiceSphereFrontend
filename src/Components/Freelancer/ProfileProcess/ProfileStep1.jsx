@@ -7,7 +7,7 @@ import { AiFillEdit } from 'react-icons/ai';
 import { IoMdCreate } from 'react-icons/io';
 import { MdAccountCircle } from 'react-icons/md';
 
-const ProfileStep1 = () => {
+const ProfileStep1 = ({ formData, handleChange, nextStep }) => {
 
 
 
@@ -24,17 +24,20 @@ const ProfileStep1 = () => {
                             <h2 ><span className='p-2'><FaCircle size={10} /></span> Create your profile  <MdAccountCircle size={45} className='pb-2' /></h2>
                             <h4 className='ps-4 lead'>Add your professional Job title</h4>
                             <div className="form-group ps-4 ">
-                                <input name="Title" style={{ backgroundColor: '#E0E0E0' }} className="form-control p-3 rounded-3" placeholder="Professional role" />
+                                <input name="Title" style={{ backgroundColor: '#E0E0E0' }} value={formData.Title}
+                                    onChange={handleChange} className="form-control p-3 rounded-3" placeholder="Professional role" />
                             </div>
 
                             <h4 className='ps-4 lead'>Add your Education</h4>
                             <div className="form-group ps-4 ">
-                                <input name="Education" style={{ backgroundColor: '#E0E0E0' }} className="form-control p-3 rounded-3" placeholder="University/Major" />
+                                <input name="Education" style={{ backgroundColor: '#E0E0E0' }} value={formData.Education}
+                                    onChange={handleChange} className="form-control p-3 rounded-3" placeholder="University/Major" />
                             </div>
 
                             <h4 className='ps-4 lead'>Add your work experience</h4>
                             <div className="form-group ps-4 ">
-                                <textarea name="workExperience" style={{ backgroundColor: '#E0E0E0' }} className="form-control p-3 rounded-3" placeholder="role1/company1, role2/company2 " />
+                                <textarea name="WorkExperience" style={{ backgroundColor: '#E0E0E0' }} value={formData.WorkExperience}
+                                    onChange={handleChange} className="form-control p-3 rounded-3" placeholder="role1/company1, role2/company2 " />
                             </div>
                         </div>
 
@@ -45,7 +48,7 @@ const ProfileStep1 = () => {
 
                         <div className='d-flex justify-content-end mt-5'>
                             <div >
-                                <Link to="/profileStep2"><button type="button" className="btn mb-3 font-weight-bold profilebtn rounded-3 px-5 "><span>Next</span></button></Link>
+                                <Link ><button type="button" className="btn mb-3 font-weight-bold profilebtn rounded-3 px-5 " onClick={nextStep}><span>Next</span></button></Link>
                             </div>
                         </div>
 

@@ -2,11 +2,14 @@
     background-color: #FAFAFA;
     
 }
-.about{
-    padding: 130px 130px;
+
+.inAbout{
+    padding-left: 100px;
+    padding-right: 100px;
 }
 .aboutus{
     text-align: left;
+    
 }
 .learn-more-btn {
     padding: 15px 30px;
@@ -75,10 +78,13 @@
     /*background-color: #150c21;*/
     background-color: black;
 }
-.unknown{
-    width: 70%;
-}
-.yourlastposts{
-    padding: 100px 100px 30px 200px;
+
+.homeSS{
+    margin: 100px 100px 100px 200px;
     
 }
+
+.homeSpacing{
+    margin: 150px 150px;
+}
+

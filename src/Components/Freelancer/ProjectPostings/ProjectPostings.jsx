@@ -2,9 +2,8 @@ import axios from "axios";
 import React, { useState } from "react";
 import { useEffect } from "react";
 import "./projectPostings.css";
-import { Link } from "react-router-dom";
 
-export default function ProjectPostings({PostFlag}) {
+export default function ProjectPostings() {
   const [posts, setPosts] = useState([]);
 
   //function to get all posts
@@ -106,7 +105,7 @@ async function fetchPosts(categoryId){
                     <p>{HandleCategory(post.categoryId)}</p>
                   </div>
                   <div className="text-center mt-3">
-                   <Link to={`/Proposal/${PostFlag}/${post.id}`}><button className="btn main-btn">Apply</button></Link>
+                    <button className="btn main-btn">Apply</button>
                   </div>
                 </div>
               </div>
